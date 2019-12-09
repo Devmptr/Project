@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @extends('head')
+    @extends('layouts.head')
 </head>
 <body>
     <head>

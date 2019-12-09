@@ -1,9 +1,9 @@
-@extends('layouts')
+@extends('layouts.home')
 @section('title','Home')
 
 @section('content')
 
-<div class="col-8 mx-auto mt-3">
+<div class="col-sm-12 col-xs-6 col-lg-8 mx-auto mt-3">
     <div id="carouselTop" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselTop1" data-slide-to="0" class="active"></li>

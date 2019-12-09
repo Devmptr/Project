@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
-});
+Route::get('/home', 'HomeController@home');
 
 Route::get('/auth','HomeController@auth');
 
 Route::get('/regist','HomeController@regist');
+
+Route::get('/dashboard','HomeController@dashboard');
+
+Route::get('/stream','HomeController@stream');
