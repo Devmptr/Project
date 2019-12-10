@@ -39,8 +39,6 @@ class HomeController extends Controller
         $cekuser=Account::where('id_user',$id)->first();
         return view('pages.profiles',['users'=>$cekuser]);
     }
-    public function genre(){
-        $movie = Movie::all();
-        return view('pages.genre',['movies'=>$movie]);
-    }
+   
+    
 }

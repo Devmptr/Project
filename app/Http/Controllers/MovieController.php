@@ -19,5 +19,14 @@ class MovieController extends Controller
         $streammovie = Movie::where('id_movie',1);
         return view('pages.welcome',['movies'=>$movie,'idmovie'=>$streammovie]);
     }
+    public function trending(){
+        $movie= Movie::all();
+        return view('pages.trending',['movies'=>$movie]);
+    }
+    public function genre(){
+        $movie = Movie::all();
+        return view('pages.genre',['movies'=>$movie]);
+    }
+   
 
 }

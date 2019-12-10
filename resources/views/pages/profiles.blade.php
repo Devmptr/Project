@@ -6,21 +6,24 @@
 <div class="row">
   <div class="col-lg-4">
         <h5 class="text-center mb-5 mt-4">Perbaharui nama anda</h5>
-        <div class="col-6 mx-auto my-3 border border-dark rounded-lg p-3">
+        <div class="col-9 mx-auto my-3 border border-dark rounded-lg p-3">
             <form action="ceklogin" method="POST">  
             <div class="form-group">
                     <label for="">Nama</label>
-                    <input type="nama" class="form-control" id="nama" name="nama" aria-describedby="namaHelp" placeholder="Enter nama">
+                    <input value= '{{$users->nama}}' type="nama" class="form-control" id="nama" name="nama" aria-describedby="namaHelp" placeholder="Enter nama">
                 </div>
                 <div class="form-group">
                     <label for="">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input value= '{{$users->email}}' type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label> 
-                    <!--<a href="#" class="float-right">Forgot Password?</a>-->
-                    <input type="password" class="form-control" id="pass" name="Password" placeholder="Password">
+                    <input value= '{{$users->password}}' type="password" class="form-control" id="pass" name="Password" placeholder="Password">
                 </div>
+                <div class="form-group">
+                    <input type="checkbox" onclick="showpassword()"> Show Password 
+                </div>
+
                 <div class="d-flex justify-content-center mt-4">
                     <button type="submit" class="text-center btn btn-primary">Submit</button>
                 </div>
@@ -58,7 +61,6 @@
       <td>{{$users->password}}</td>
     </tr>
   </tbody>
-
 </table>
 </div>
 </div>

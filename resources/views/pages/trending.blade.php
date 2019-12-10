@@ -2,7 +2,6 @@
 @section('title','Home')
 
 @section('content')
-
 <div class="recomendation">
     <div class="col-md-12 mt-5">
         <h2 class="text-center mb-5 mt-4">Genre</h2>

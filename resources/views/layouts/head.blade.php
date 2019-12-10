@@ -6,6 +6,7 @@
 <script src="/js/jquery-3.4.1.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/dashboard.js"></script>
+<script src="/js/profile.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/dashboard.css">

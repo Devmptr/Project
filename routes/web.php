@@ -33,4 +33,6 @@ Route::post('/registuser','LoginController@registerUser');
 
 Route::get('/profilesuser','HomeController@profiles');
 
-Route::get('/genre','HomeController@genre');
+Route::get('/genre','MovieController@genre');
+
+Route::get('/trending','MovieController@trending');
