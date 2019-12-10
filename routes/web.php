@@ -30,3 +30,5 @@ Route::get('/logout','LoginController@authLogout');
 Route::post('cariuser','DashboardController@searchuser');
 
 Route::post('/registuser','LoginController@registerUser');
+
+Route::get('/profilesuser','HomeController@profiles');

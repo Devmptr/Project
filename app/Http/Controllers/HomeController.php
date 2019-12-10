@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Account;
 
 class HomeController extends Controller
 {
@@ -31,5 +32,10 @@ class HomeController extends Controller
     
     public function stream(){
         return view('pages.stream')->with('location','stream');
+    }
+    public function profiles(){
+        $id=Session::get('iduser');
+        $cekuser=Account::where('id_user',$id);
+        return view('pages.profiles',['users'=>$cekuser]);
     }
 }
