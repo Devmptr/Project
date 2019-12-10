@@ -32,3 +32,5 @@ Route::post('cariuser','DashboardController@searchuser');
 Route::post('/registuser','LoginController@registerUser');
 
 Route::get('/profilesuser','HomeController@profiles');
+
+Route::get('/genre','HomeController@genre');

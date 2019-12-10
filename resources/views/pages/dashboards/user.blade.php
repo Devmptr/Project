@@ -26,7 +26,7 @@
         <tbody>
             @foreach($users as $user)
                 <tr class="isiauto">
-                    <td>{{$user->id_user}}</th>
+                    <td>{{$user->id_user}}</td>
                     <td>{{$user->nama}}</td>
                     <td>{{$user->email}}</td>
                     <td>{{$user->password}}</td>

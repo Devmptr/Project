@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use App\Account;
+use App\Movie;
 
 class HomeController extends Controller
 {
@@ -29,16 +30,18 @@ class HomeController extends Controller
     public function regist(){
         return view('pages.regist')->with('location','regist');
     }
-<<<<<<< HEAD
     
     public function stream(){
         return view('pages.stream')->with('location','stream');
     }
     public function profiles(){
         $id=Session::get('iduser');
-        $cekuser=Account::where('id_user',$id);
+        $cekuser=Account::where('id_user',$id)->first();
         return view('pages.profiles',['users'=>$cekuser]);
     }
-=======
->>>>>>> 7be03b3a7fae1013f72400c317107946605c3283
+    public function genre(){
+        $movie = Movie::all();
+        return view('pages.genre',['movies'=>$movie]);
+    }
+
 }

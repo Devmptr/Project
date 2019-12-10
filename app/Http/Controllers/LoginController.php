@@ -15,7 +15,7 @@ class LoginController extends Controller
             echo 'EMAIL TIDAK BOLEH KOSONG';
         }else{
             if ($cekemail->password == $input->Password){
-                Session::put('iduser'.$cekemail->id_user);
+                Session::put('iduser',$cekemail->id_user);
                 Session::put('nama',$cekemail->nama);
                 Session::put('hakakses',$cekemail->authority);
 
