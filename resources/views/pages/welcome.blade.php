@@ -2,7 +2,6 @@
 @section('title','Home')
 
 @section('content')
-
 <div class="col-sm-12 col-xs-6 col-lg-8 mx-auto mt-3">
     <div id="carouselTop" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -43,23 +42,25 @@
             <a class="nav-link" href="#">Comedy</a>
         </li>
     </ul>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+    </div>
     <div class="col-12 row mx-auto">
-        <?php
-            for ($x = 1; $x <= 8; $x++) {
-                echo '
-                <div class="col-lg-3 col-sm-6 col-xs-12 mt-3">
-                    <div class="card">
-                        <img class="card-img-top" src="img/cover1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Joker (2019)</h5>
-                            <p class="card-text">During the 1980s, a failed stand-up comedian is driven insane...</p>
-                            <a href="#" class="btn btn-primary text-center">Watch</a>
-                        </div>
+        @foreach($movies as $movie)
+            <div class="col-lg-3 col-sm-6 col-xs-12 mt-3">
+                <div class="card">
+                    <img class="h-100 card-img-top" src="{{$movie->cover}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{$movie->judul}}</h5>
+                        <p class="card-text">{{$movie->deskripsi}}</p>
+                        <a href="#" class="btn btn-primary text-center">Watch</a>
                     </div>
-                </div>';
-            }
-        ?>
-        <div class="my-3 mx-auto">
+                </div>
+            </div>
+        @endforeach
+        <div class="col-12 my-3 mx-auto d-flex justify-content-center">
             <button type="button" class="btn btn-outline-primary">Load More</button>    
         </div>
     </div>

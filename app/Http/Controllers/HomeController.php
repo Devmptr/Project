@@ -3,24 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
     //
-     public function home(){
-        return view('pages.welcome')->with('location','home');
+
+    public function home(){
+        if (!Session::has('nama')){
+            return redirect('auth');
+        }else{
+            return view('pages.welcome');
+        }
     }
     
     public function auth(){
-        return view('pages.auth')->with('location','auth');
+        if (Session::has('nama')){
+            return redirect('home');
+        }else{
+            return view('pages.auth');
+        }
     }
 
     public function regist(){
         return view('pages.regist')->with('location','regist');
-    }
-
-    public function dashboard(){
-        return view('pages.dashboard')->with('location','dashboard');
     }
     
     public function stream(){

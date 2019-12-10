@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
 <title>@yield('title')</title>
-<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery-3.4.1.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/dashboard.js"></script>
 <link rel="stylesheet" href="/css/bootstrap.min.css">

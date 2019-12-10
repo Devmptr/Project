@@ -48,6 +48,11 @@
 
 /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
 #main .content {
-    padding: 20px;
+    padding: 20px 10px;
     height: auto;
 }
+
+.isiajax{
+    display:none;
+}
+

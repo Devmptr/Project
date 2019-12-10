@@ -33,8 +33,12 @@
                         </div>
                     </li>
                 </ul>
-                <button type="button" class="mx-1 btn btn-primary btn-sm">Profile</button>
-                <button type="button" class="mx-1 btn btn-primary btn-sm">Logout</button>
+                @if (Session::get('hakakses') == 1)
+                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="dashboard">Dashboard</a>
+                @else
+                    <button type="button" class="mx-1 btn btn-primary btn-sm">Hai, {{Session::get('nama')}}</button>
+                @endif
+                <a type="button" class="mx-1 btn btn-primary btn-sm" href="logout">Logout</a>
             </div>
         </nav>
     </head>

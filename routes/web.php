@@ -11,12 +11,22 @@
 |
 */
 
-Route::get('/home', 'HomeController@home');
+Route::get('/','HomeController@auth');
+
+Route::get('/home', 'MovieController@home');
 
 Route::get('/auth','HomeController@auth');
 
 Route::get('/regist','HomeController@regist');
 
-Route::get('/dashboard','HomeController@dashboard');
+Route::get('/dashboard','DashboardController@dashboard');
 
 Route::get('/stream','HomeController@stream');
+
+Route::post('/ceklogin','LoginController@authLogin');
+
+Route::get('/logout','LoginController@authLogout');
+
+Route::post('cariuser','DashboardController@searchuser');
+
+Route::post('/registuser','LoginController@registerUser');

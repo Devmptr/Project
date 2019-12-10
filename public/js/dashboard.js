@@ -1,13 +1,43 @@
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
 } 
+   
+
+
+$(document).ready(function(){
+    function fetchuser(){};
+    
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    
+    function fetchuser(query="") {
+        event.preventDefault();
+        var innama = $("input[name=Nama]").val();
+    
+        $.ajax({
+            type: 'POST',
+            url: 'cariuser',
+            data: {value:innama},
+            success: function(data){
+              $('tbody').html(data.success.table_data);
+              $('tbody .isiauto').hide();
+            }
+        });
+    }
+
+    $(this).on('keyup','#searchn', function(){
+      var query = $(this).val();
+        fetchuser(query);
+    });
+});
