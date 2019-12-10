@@ -67,51 +67,22 @@
         <hr>
         <h1>Rekomendasi Film</h1>
         <div class="card-deck mt-3">
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="img/cover1.jpg" class="h-100 card-img" alt="...">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
-                                This content is a little bit longer.</p>
-                            <a href="#">Tonton</a>
+            @foreach($movies as $movie)
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img src="{{$movie->cover}}" class="h-100 card-img" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">{{$movie->judul}}</h5>
+                                <p class="card-text">{{$movie->deskripsi}}</p>
+                                <a href="#">Tonton</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="img/cover1.jpg" class="h-100 card-img" alt="...">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
-                                This content is a little bit longer.</p>
-                            <a href="#">Tonton</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img src="img/cover1.jpg" class="h-100 card-img" alt="...">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
-                                This content is a little bit longer.</p>
-                            <a href="#">Tonton</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
 
     </div>

@@ -28,8 +28,4 @@ class HomeController extends Controller
     public function regist(){
         return view('pages.regist')->with('location','regist');
     }
-    
-    public function stream(){
-        return view('pages.stream')->with('location','stream');
-    }
 }

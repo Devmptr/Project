@@ -21,7 +21,7 @@ Route::get('/regist','HomeController@regist');
 
 Route::get('/dashboard','DashboardController@dashboard');
 
-Route::get('/stream','HomeController@stream');
+Route::get('/stream','MovieController@stream');
 
 Route::post('/ceklogin','LoginController@authLogin');
 
