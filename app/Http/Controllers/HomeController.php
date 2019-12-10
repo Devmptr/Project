@@ -29,6 +29,7 @@ class HomeController extends Controller
     public function regist(){
         return view('pages.regist')->with('location','regist');
     }
+<<<<<<< HEAD
     
     public function stream(){
         return view('pages.stream')->with('location','stream');
@@ -38,4 +39,6 @@ class HomeController extends Controller
         $cekuser=Account::where('id_user',$id);
         return view('pages.profiles',['users'=>$cekuser]);
     }
+=======
+>>>>>>> 7be03b3a7fae1013f72400c317107946605c3283
 }

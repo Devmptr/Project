@@ -6,7 +6,7 @@
 <table class="table">
   <thead>
     <tr>
-    <div class='col-sm'>
+    <div class='col-lg-8'>
           <th scope="col">ID</th>
     </tr>
   </thead>
