@@ -23,8 +23,6 @@ Route::get('/dashboard','DashboardController@dashboard');
 
 Route::get('/stream','MovieController@stream');
 
-Route::post('/ceklogin','LoginController@authLogin');
-
 Route::get('/logout','LoginController@authLogout');
 
 Route::post('cariuser','DashboardController@searchuser');
@@ -36,3 +34,7 @@ Route::get('/profilesuser','HomeController@profiles');
 Route::get('/genre','MovieController@genre');
 
 Route::get('/trending','MovieController@trending');
+
+Route::post('/updateuser','HomeController@updateUser');
+
+Route::post('/ceklogin','LoginController@authLogin');

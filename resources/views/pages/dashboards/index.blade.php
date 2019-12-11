@@ -8,7 +8,6 @@
             <div class="form-inline ml-auto mr-0">
                 <input id="searchn" name="Nama" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="">
             </div>
-            </nav>
         </div>
     </div>
     <table id="tabel-user" class="my-3 table table-hover">
@@ -42,6 +41,5 @@
     </table>
     <!--<div class="d-flex justify-content-center">
     </div>-->
-    
 </div>
 @endsection

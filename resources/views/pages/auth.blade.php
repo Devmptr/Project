@@ -18,6 +18,9 @@
                     <!--<a href="#" class="float-right">Forgot Password?</a>-->
                     <input type="password" class="form-control" id="pass" name="Password" placeholder="Password">
                 </div>
+                <div class="form-group">
+                    <input type="checkbox" onclick="showpassword()"> Show Password 
+                </div>
                 <div class="d-flex justify-content-center mt-4">
                     <button type="submit" class="text-center btn btn-primary">Submit</button>
                 </div>

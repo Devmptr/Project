@@ -39,6 +39,13 @@ class HomeController extends Controller
         $cekuser=Account::where('id_user',$id)->first();
         return view('pages.profiles',['users'=>$cekuser]);
     }
-   
+
+    public function updateUser(Request $input){
+        $idedit=Session::get('iduser');
+        Account::where('id_user',$idedit)->update(['nama'=>$input->name, 'email'=>$input->email, 'password'=>$input->password]);
+
+        $databaru = Account::where('id_user',$idedit)->first();
+        return response()->json(['success'=>$databaru]);
+    }
     
 }

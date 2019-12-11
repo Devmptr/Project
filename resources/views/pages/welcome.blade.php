@@ -42,11 +42,6 @@
             <a class="nav-link" href="#">Comedy</a>
         </li>
     </ul>
-    <div class="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-    </div>
     <div class="col-12 row mx-auto">
         @foreach($movies as $movie)
             <div class="col-lg-3 col-sm-6 col-xs-12 mt-3">

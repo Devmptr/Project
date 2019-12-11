@@ -6,22 +6,23 @@ use Illuminate\Http\Request;
 use App\Account;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 
 class DashboardController extends Controller
 {
     //
     public function dashboard(){
-        $user = Account::all();
+        $user = Account::where('status','=','0')->get();
         return view('pages.dashboards.index',['users'=>$user]);
     }
 
     public function searchuser(Request $input){
         $output='';
         if($input->value == ''){
-            $user = Account::all();
+            $user = Account::where('status','=','0')->get();
             $totaluser = $user->count();
         }else{
-            $user = Account::where('nama','=',$input->value)->get();
+            $user = Account::where('nama','=',$input->value)->where('status','=','0')->get();
             $totaluser = $user->count();
         }
         if($totaluser > 0){

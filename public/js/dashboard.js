@@ -21,14 +21,13 @@ $(document).ready(function(){
         }
     });
     
-    function fetchuser(query="") {
+    function fetchuser(input="") {
         event.preventDefault();
-        var innama = $("input[name=Nama]").val();
     
         $.ajax({
             type: 'POST',
             url: 'cariuser',
-            data: {value:innama},
+            data: {value:input},
             success: function(data){
               $('tbody').html(data.success.table_data);
               $('tbody .isiauto').hide();

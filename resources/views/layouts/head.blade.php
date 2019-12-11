@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/styles.css">
 <link rel="stylesheet" href="/css/dashboard.css">
+<meta name="csrf-token" content="{{ csrf_token() }}"/>
