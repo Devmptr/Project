@@ -17,8 +17,6 @@ $(document).ready(function(){
   
   $('#btnupdate').click(function(){
     event.preventDefault();
-    
-
     $.ajax({
       type: 'POST',
       url: 'updateuser',

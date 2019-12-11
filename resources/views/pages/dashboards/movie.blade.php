@@ -6,35 +6,32 @@
         <div class="row">
             <h1>Movies Setting</h1>
             <div class="form-inline ml-auto mr-0">
-                <input id="searchn" name="Nama" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="">
+                <input id="searchmovie" name="Nama" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" value="">
             </div>
-            </nav>
         </div>
     </div>
     <table id="tabel-user" class="my-3 table table-hover">
         <!--<caption></caption>-->
         <thead>
             <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Email</th>
-                <th scope="col">Password</th>
-                <th scope="col">Authority</th>
-                <th scope="col">Setting</th>
+                <th scope="col" class="col-1">ID</td>
+                <th scope="col" class="col-3">Judul</th>
+                <th scope="col" class="col-3">Deskripsi</th>
+                <th scope="col" class="col-2">Genre</th>
+                <th scope="col" class="col-3">Setting</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($users as $user)
-                <tr class="isiauto">
-                    <td>{{$user->id_user}}</th>
-                    <td>{{$user->nama}}</td>
-                    <td>{{$user->email}}</td>
-                    <td>{{$user->password}}</td>
-                    <td>{{$user->authority}}</td>
-                    <td>
-                        <a href="#">Lihat</a>
-                        <a href="#">Edit</a>
-                        <a href="#">Delete</a>
+            @foreach($movies as $movie)
+                <tr class="isiauto" id="">
+                    <td class="col-1">{{$movie->id_movie}}</td>
+                    <td class="col-3">{{$movie->judul}}</td>
+                    <td class="col-3">{{$movie->deskripsi}}</td>
+                    <td class="col-2">action</td>
+                    <td class="col-3">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="">Lihat</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="">Edit</button>
+                        <button id="{{$movie->id_movie}}" type="submit" class="btn-delete btn btn-primary">Delete</button>
                     </td>
                 </tr>
             @endforeach
@@ -42,6 +39,5 @@
     </table>
     <!--<div class="d-flex justify-content-center">
     </div>-->
-    
 </div>
 @endsection
