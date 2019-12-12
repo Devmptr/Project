@@ -134,4 +134,47 @@ $(document).ready(function(){
         var query = $(this).val();
           fetchmovie(query);
     });
+
+    
+
+  $(this).on('click','.btn-deletemovie',function(event){
+    event.preventDefault();
+    var iddelete = $(this).attr('id');
+    $.ajax({
+        method: 'POST',
+        url: '/deletemovie/'+iddelete,
+        success: function(data){
+          if(data=='sukses'){
+            alert('berhasil hapus data');
+            loadDataMovie();
+          }
+        }
+    });
+  });
+  $(this).on('click','.btn-showmovie',function(){
+    event.preventDefault();
+    var idshowmovie = $(this).attr('id');
+    $.ajax({
+      method: 'POST',
+      url: '/lihatmovie/'+idshowmovie,
+      success: function(data){
+        $('#lihatModalMovie .modal-body .body-judul').html(data.success[0].judul);
+        $('#lihatModalMovie .modal-body .body-genre').html(data.success[0].genre);
+        $('#lihatModalMovie .modal-body .body-cover').html(data.success[0].cover);
+        $('#lihatModalMovie .modal-body .body-id_genre').html(data.success[0].id_genre);
+      }
+    })
+});;
+
+  function loadDataMovie(){
+    $.ajax({
+      type: 'POST',
+      url: "/getdatamovie",
+      success:function(data){
+        $('tbody').html(data.success.table_data);
+        $('tbody .isiauto').hide();
+      }
+    })
+  }
+
 });

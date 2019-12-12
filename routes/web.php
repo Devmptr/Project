@@ -51,3 +51,9 @@ Route::post('/getdatauser','DashboardController@getDataUser');
 Route::post('/lihatuser/{id}','DashboardController@lihatUser');
 
 Route::post('/edituser','DashboardController@editUser');
+
+Route::post('/deletemovie/{id}','DashboardController@deletemovie');
+
+Route::post('/getdatamovie','DashboardController@getDataMovie');
+
+Route::post('/lihatmovie/{id}','DashboardController@lihatmovie');

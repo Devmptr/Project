@@ -21,6 +21,10 @@ class DashboardController extends Controller
         Account::where('id_user','=',$user)->update(['status'=>'1']);
         echo 'sukses';
     }
+    public function deleteMovie($movie){
+        Movie::where('id_movie','=',$movie)->delete();
+        echo 'sukses';
+    }
 
     public function getDataUser(){
         $output='';
@@ -48,6 +52,10 @@ class DashboardController extends Controller
     public function lihatUser($input){
         $user = Account::where('id_user','=',$input)->where('status','=','0')->get();
         return response()->json(['success'=>$user]);
+    }
+    public function lihatMovie($input){
+        $movie = Movie::where('id_movie','=',$input)->get();
+        return response()->json(['success'=>$movie]);
     }
 
     public function searchuser(Request $input){
@@ -135,7 +143,7 @@ class DashboardController extends Controller
             <td class='col-3'>
                 <button type='button' class='btn btn-primary'>Lihat</button>
                 <button type='button' class='btn btn-primary'>Edit</button>
-                <button id='{{$row->id_movie}}' type='submit' class='btn-delete btn btn-primary'>Delete</button>
+                <button id='{{$row->id_movie}}' type='submit' class='btn-deletemovie btn btn-primary'>Delete</button>
             </td>
             </tr>";
         }
@@ -150,6 +158,5 @@ class DashboardController extends Controller
         $databaru = Account::where('id_user','=',$input->id)->get(); 
         return response()->json(['status'=>'success','baru'=>$databaru]);
     }
-    
 
 }
