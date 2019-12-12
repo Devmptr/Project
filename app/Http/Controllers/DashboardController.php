@@ -33,9 +33,9 @@ class DashboardController extends Controller
             <td class='col-2'>$row->password</td>
             <td class='col-2'>$row->authority</td>
             <td class='col-3'>
-                <button type='button' class='btn btn-primary'>Lihat</button>
-                <button type='button' class='btn btn-primary'>Edit</button>
-                <button id='{{$row->id_user}}' type='submit' class='btn-delete btn btn-primary'>Delete</button>
+                <button id='$row->id_user' type='button' class='btn-show btn btn-primary' data-toggle='modal' data-target='#lihatModal'>Lihat</button>
+                <button id='$row->id_user' type='button' class='btn-showedit btn btn-primary' data-toggle='modal' data-target='#editModal'>Edit</button>
+                <button id='$row->id_user' type='submit' class='btn-delete btn btn-primary'>Delete</button>
             </td>
             </tr>";
         }
@@ -44,7 +44,12 @@ class DashboardController extends Controller
         );
         return response()->json(['success'=>$data]);
     }
-    
+
+    public function lihatUser($input){
+        $user = Account::where('id_user','=',$input)->where('status','=','0')->get();
+        return response()->json(['success'=>$user]);
+    }
+
     public function searchuser(Request $input){
         $output='';
         if($input->value == ''){
@@ -63,9 +68,9 @@ class DashboardController extends Controller
                 <td class='col-2'>$row->password</td>
                 <td class='col-2'>$row->authority</td>
                 <td class='col-3'>
-                    <button type='button' class='btn btn-primary'>Lihat</button>
-                    <button type='button' class='btn btn-primary'>Edit</button>
-                    <button id='{{$row->id_user}}' type='submit' class='btn-delete btn btn-primary'>Delete</button>
+                    <button id='$row->id_user' type='button' class='btn-show btn btn-primary' data-toggle='modal' data-target='#lihatModal'>Lihat</button>
+                    <button id='$row->id_user' type='button' class='btn-showedit btn btn-primary' data-toggle='modal' data-target='#editModal'>Edit</button>
+                    <button id='$row->id_user' type='submit' class='btn-delete btn btn-primary'>Delete</button>
                 </td>
                 </tr>";
             }
@@ -139,5 +144,12 @@ class DashboardController extends Controller
         );
         return response()->json(['success'=>$data]);
     }
+
+    public function editUser(Request $input){
+        Account::where('id_user','=',$input->id)->update(['nama'=>$input->nama, 'email'=>$input->email, 'password'=>$input->password,'authority'=>$input->auth]);
+        $databaru = Account::where('id_user','=',$input->id)->get(); 
+        return response()->json(['status'=>'success','baru'=>$databaru]);
+    }
+    
 
 }

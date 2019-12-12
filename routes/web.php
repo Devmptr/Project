@@ -47,3 +47,7 @@ Route::post('/ceklogin','LoginController@authLogin');
 Route::post('/deleteuser/{id}','DashboardController@deleteUser');
 
 Route::post('/getdatauser','DashboardController@getDataUser');
+
+Route::post('/lihatuser/{id}','DashboardController@lihatUser');
+
+Route::post('/edituser','DashboardController@editUser');
