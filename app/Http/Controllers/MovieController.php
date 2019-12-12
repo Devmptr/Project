@@ -34,6 +34,4 @@ class MovieController extends Controller
         $movie = Movie::all();
         return view('pages.genre',['movies'=>$movie]);
     }
-   
-
 }

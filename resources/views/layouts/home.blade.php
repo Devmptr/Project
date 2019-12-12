@@ -5,12 +5,11 @@
 </head>
 <body>
     <head>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">TubesPrognet</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+                <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Stream
+            </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
@@ -22,7 +21,8 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Genre
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -36,7 +36,8 @@
                 @if (Session::get('hakakses') == 1)
                     <a type="button" class="mx-1 btn btn-primary btn-sm" href="dashboard">Dashboard</a>
                 @else
-                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="profilesuser">Hai, {{Session::get('nama')}}</a>
+                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="profilesuser">
+                        Hai, {{Session::get('nama')}}</a>
                 @endif
                 <a type="button" class="mx-1 btn btn-primary btn-sm" href="logout">Logout</a>
             </div>
@@ -49,7 +50,8 @@
         <div class="col-12">
             <hr>
             <p class="float-right"><a href="#">Back to top</a></p>
-            <p>&copy; 2019 Teknologi Informasi, Universitas Udayana. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>  
+            <p>&copy; 2019 Teknologi Informasi, Universitas Udayana. &middot; <a href="#">
+                Privacy</a> &middot; <a href="#">Terms</a></p>  
         </div>
     </footer>
 </body>

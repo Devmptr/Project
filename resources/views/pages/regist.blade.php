@@ -3,6 +3,7 @@
 <head>
     @extends('layouts.head')
     @section('title','Register')
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
     <div class="container mt-5">

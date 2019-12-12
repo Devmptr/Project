@@ -11,7 +11,8 @@
             <form action="ceklogin" method="POST">  
                 <div class="form-group">
                     <label for="">Email Address</label>
-                    <input type="email" class="form-control" id="email" name="Email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <input type="email" class="form-control" id="email" name=
+                    "Email" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="">Password</label> 

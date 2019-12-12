@@ -9,15 +9,12 @@
         </div>
     </div>
     
+    
     <div class="col-sm-12 col-lg-10 mt-3 mx-auto">
-        <h2 id="judul">War</h2>
+        <h2 id="judul">Joker</h2>
         <p id="deskripsi" class="text-justify">
-            WAR is set to be a visual spectacle for quintessential action cinema lovers as they would witness Hrithik and Tiger pull off jaw-dropping 
-            sequences as they try to beat each other. Director Siddharth Anand says, “When you bring two of the biggest and the best action superstars 
-            of India in one film and pit them against each other, you need a title that justifies the promise of a massive showdown. Hrithik and Tiger 
-            will be seen going at each other ferociously and mercilessly and audiences will want to see who outwits whom in this incredible fight. WAR 
-            is the only title that could have delivered on this big promise and justifies the level of an action spectacle that the film is trying to 
-            present to audiences globally.”
+        In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. 
+        This path brings him face-to-face with his alter-ego: the Joker. 
         </p>
         <div class="row">
             <div class="col-lg-4 col-sm-12">
@@ -33,28 +30,28 @@
                             </td>
 
                             <th>Duration :</th>
-                            <td>151 Menit</td>
+                            <td>92 Menit</td>
                         </tr>
                         <tr>
                             <th>Actors :</th>
-                            <td>Efraim</td>
+                            <td>Joaqin Phoenix</td>
 
                             <th>Quality :</th>
                             <td>HD</td>
                         </tr>
                         <tr>
                             <th>Directors :</th>
-                            <td>William</td>
+                            <td>Tood Phillips</td>
 
                             <th>Release Date :</th>
-                            <td>02 Oktober 2019</td>
+                            <td>04 Oktober 2019</td>
                         </tr>
                         <tr>
                             <th>Productions :</th>
-                            <td>ABF</td>
+                            <td>Warner Bros</td>
 
                             <th>Countries :</th>
-                            <td>Indonesia</td>
+                            <td>USA</td>
                         </tr>
                     </tbody>
                 </table>
@@ -73,7 +70,7 @@
                         <div class="col-md-5">
                             <img src="{{$movie->cover}}" class="h-100 card-img" alt="...">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-10">
                             <div class="card-body">
                                 <h5 class="card-title">{{$movie->judul}}</h5>
                                 <p class="card-text">{{$movie->deskripsi}}</p>
