@@ -45,14 +45,16 @@
     <div class="col-12 row mx-auto">
         @foreach($movies as $movie)
             <div class="col-lg-3 col-sm-6 col-xs-12 mt-3">
+            <form action="/stream/{{$movie->id_movie}}" method="GET">
                 <div class="card">
                     <img class="h-100 card-img-top" src="{{$movie->cover}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{$movie->judul}}</h5>
                         <p class="card-text">{{$movie->deskripsi}}</p>
-                        <button type="submit" id="{{$movie->id_user}}" class="btn-watch btn btn-primary text-center">Watch</button>
+                        <button type="submit" class="btn-watch btn btn-primary text-center">Watch</button>
                     </div>
                 </div>
+            </form>
             </div>
         @endforeach
         <div class="col-12 my-3 mx-auto d-flex justify-content-center">

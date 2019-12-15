@@ -9,9 +9,9 @@
     <!-- The sidebar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a class="active" href="#">Home Profile</a>
-        <a href="#user">User Settings</a>
-        <a href="#movie">Movie Database</a>
+        <a class="active" href="profileadmin">Home Profile</a>
+        <a href="usersetting">User Settings</a>
+        <a href="moviesetting">Movie Database</a>
     </div>
     <!-- Page content -->
     <div id="main">

@@ -10,7 +10,7 @@ class MovieController extends Controller
     //
 
     public function stream($idmovie){
-        $movie = Movie::where('id_user','=',$idmovie)->get();
+        $movie = Movie::where('id_movie','=',$idmovie)->first();
         $allmovie = Movie::all();
         return view('pages.stream',['movie'=>$movie,'allmovie'=>$allmovie]);
     }

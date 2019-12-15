@@ -6,18 +6,18 @@
 <body>
     <head>
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Stream
             </a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Favorite</a>
+                        <a class="nav-link" href="#">Recommend</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -34,9 +34,9 @@
                     </li>
                 </ul>
                 @if (Session::get('hakakses') == 1)
-                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="dashboard">Dashboard</a>
+                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="profileadmin">Dashboard</a>
                 @else
-                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="profilesuser">
+                    <a type="button" class="mx-1 btn btn-primary btn-sm" href="profileuser">
                         Hai, {{Session::get('nama')}}</a>
                 @endif
                 <a type="button" class="mx-1 btn btn-primary btn-sm" href="logout">Logout</a>
