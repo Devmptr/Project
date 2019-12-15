@@ -21,14 +21,11 @@ Route::get('/regist','HomeController@regist');
 
 Route::get('/dashboard','DashboardController@dashboard');
 
-Route::get('/stream','MovieController@stream');
-
 Route::get('/genre','MovieController@genre');
 
 Route::get('/trending','MovieController@trending');
 
 Route::get('/movie','MovieController@movie');
-
 
 Route::get('/logout','LoginController@authLogout');
 
@@ -51,3 +48,5 @@ Route::post('/getdatauser','DashboardController@getDataUser');
 Route::post('/lihatuser/{id}','DashboardController@lihatUser');
 
 Route::post('/edituser','DashboardController@editUser');
+
+Route::get('/stream/{id}','MovieController@stream');

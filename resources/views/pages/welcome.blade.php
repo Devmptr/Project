@@ -50,7 +50,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$movie->judul}}</h5>
                         <p class="card-text">{{$movie->deskripsi}}</p>
-                        <a href="#" class="btn btn-primary text-center">Watch</a>
+                        <button type="submit" id="{{$movie->id_user}}" class="btn-watch btn btn-primary text-center">Watch</button>
                     </div>
                 </div>
             </div>

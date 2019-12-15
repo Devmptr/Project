@@ -9,9 +9,10 @@ class MovieController extends Controller
 {
     //
 
-    public function stream(){
-        $movie = Movie::all();
-        return view('pages.stream',['movies'=>$movie]);
+    public function stream($idmovie){
+        $movie = Movie::where('id_user','=',$idmovie)->get();
+        $allmovie = Movie::all();
+        return view('pages.stream',['movie'=>$movie,'allmovie'=>$allmovie]);
     }
 
     public function movie(){
@@ -21,8 +22,7 @@ class MovieController extends Controller
 
     public function home(){
         $movie = Movie::all();
-        $streammovie = Movie::where('id_movie',1);
-        return view('pages.welcome',['movies'=>$movie,'idmovie'=>$streammovie]);
+        return view('pages.welcome',['movies'=>$movie]);
     }
 
     public function trending(){

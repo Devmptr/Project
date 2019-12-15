@@ -11,14 +11,13 @@
     
     
     <div class="col-sm-12 col-lg-10 mt-3 mx-auto">
-        <h2 id="judul">Joker</h2>
+        <h2 id="judul">{{movie->judul}}</h2>
         <p id="deskripsi" class="text-justify">
-        In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. 
-        This path brings him face-to-face with his alter-ego: the Joker. 
+        {{movie->deskripsi}}
         </p>
         <div class="row">
             <div class="col-lg-4 col-sm-12">
-                <img src="img/cover2.jpg" class="w-100 h-100 card-img" height="200px" width="200px">
+                <img src="{{movie->judul}}" class="w-100 h-100 card-img" height="200px" width="200px">
             </div>
             <div class="col-lg-8 col-sm-12">
                 <table class="table table-borderless">
@@ -64,7 +63,7 @@
         <hr>
         <h1>Rekomendasi Film</h1>
         <div class="card-deck mt-3">
-            @foreach($movies as $movie)
+            @foreach($allmovie as $movies)
                 <div class="card mb-3">
                     <div class="row no-gutters">
                         <div class="col-md-5">
@@ -72,9 +71,9 @@
                         </div>
                         <div class="col-md-10">
                             <div class="card-body">
-                                <h5 class="card-title">{{$movie->judul}}</h5>
-                                <p class="card-text">{{$movie->deskripsi}}</p>
-                                <a href="#">Tonton</a>
+                                <h5 class="card-title">{{$movies->judul}}</h5>
+                                <p class="card-text">{{$movies->deskripsi}}</p>
+                                <a id="{{$movie->id_movie}}">Tonton</a>
                             </div>
                         </div>
                     </div>
