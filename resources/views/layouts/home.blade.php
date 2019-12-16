@@ -17,20 +17,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Recommend</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
-                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Genre
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Drama</a>
-                            <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item">Lainnya</a>
-                        </div>
+                        <a class="nav-link" href="/trending">Recommend</a>
                     </li>
                 </ul>
                 @if (Session::get('hakakses') == 1)

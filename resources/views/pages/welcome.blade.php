@@ -33,13 +33,7 @@
 <div class="col-12 mx-auto mt-3">
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" href="#">Action</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Drama</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Comedy</a>
+            <a class="nav-link active" href="#">Rekomendasi</a>
         </li>
     </ul>
     <div class="col-12 row mx-auto">
@@ -50,7 +44,11 @@
                     <img class="h-100 card-img-top" src="{{$movie->cover}}" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{$movie->judul}}</h5>
-                        <p class="card-text">{{$movie->deskripsi}}</p>
+                        <p class="card-text">
+                            <?php
+                                echo (str_word_count($movie->deskripsi) > 20 ? substr($movie->deskripsi,0,110)."[...]" : $movie->deskripsi);
+                            ?>
+                        </p>
                         <button type="submit" class="btn-watch btn btn-primary text-center">Watch</button>
                     </div>
                 </div>
