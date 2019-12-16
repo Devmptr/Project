@@ -56,3 +56,8 @@
     display:none;
 }
 
+.closebtn{
+    position: static;
+    top: 10px;
+	left: 30px;  
+}
