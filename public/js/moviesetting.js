@@ -24,7 +24,9 @@ $(document).ready(function(){
         $.ajax({
             method: 'POST',
             url: '/insertmovie',
-            data:{judul: $('#insertMovieModal input[name=inJudul]').val(), deskripsi:$('#insertMovieModal input[name=inDeskripsi]').val(), cover:$('#insertMovieModal input[name=inCover]').val(), genre:$('#insertMovieModal input[name=inGenre]').val(), link:$('#insertMovieModal input[name=inLink]').val()},
+            data:{judul: $('#insertMovieModal input[name=inJudul]').val(), deskripsi:$('#insertMovieModal input[name=inDeskripsi]').val(), 
+            cover:$('#insertMovieModal input[name=inCover]').val(), genre:$('#insertMovieModal input[name=inGenre]').val(), 
+            link:$('#insertMovieModal input[name=inLink]').val()},
             success: function(data){
                 if(data=="sukses"){
                     alert('berhasil tambah movie');
@@ -91,7 +93,10 @@ $(document).ready(function(){
             $.ajax({
                 method: 'POST',
                 url: '/editmovie',
-                data:{id:idshow, judul: $('#editMovieModal input[name=edJudul]').val(), deskripsi:$('#editMovieModal input[name=edDeskripsi]').val(), cover:$('#editMovieModal input[name=edCover]').val(), genre:$('#editMovieModal input[name=edGenre]').val(), link:$('#editMovieModal input[name=edLink]').val()},
+                data:{id:idshow, judul: $('#editMovieModal input[name=edJudul]').val(), 
+                deskripsi:$('#editMovieModal input[name=edDeskripsi]').val(), 
+                cover:$('#editMovieModal input[name=edCover]').val(), genre:$('#editMovieModal input[name=edGenre]').val(), 
+                link:$('#editMovieModal input[name=edLink]').val()},
                 success: function(data){
                     if(data=="sukses"){
                         alert('berhasil edit Movie');
